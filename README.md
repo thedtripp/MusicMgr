@@ -1,7 +1,7 @@
 # MusicMgr
 
 ## How To Run
-0. [Optional] demo app at:
+0. [Optional] VIEW DEMO APP AT:
 ```
 https://musicmgr.herokuapp.com/
 ```
@@ -49,6 +49,6 @@ List all attributes of the song matching the search term.
 Search is case sensitive.
 
 ### Rate:
-Provide a star rating for your songs so you know what you like (and what you don't).
+Provide a star rating for any of your songs so you know what you like (and what you don't).
 Accepts an integer from [0, 5].
 Floats will be truncated.
