@@ -21,7 +21,12 @@ $ source env/bin/activate
 $ (env) pip install -r requirements.txt
 ```
 
-4. Start the web server:
+4. Run the `json2sqlite.py` script to generate the playlist database:
+```
+python json2sqlite.py
+```
+
+5. Start the web server:
 ```
 $ (env) python app.py
 ```
@@ -32,3 +37,5 @@ This server will start on port 5000 by default. You can change this in `app.py` 
 if __name__ == "__main__":
     app.run(debug=True, port=<desired port>)
 ```
+
+### Usage
