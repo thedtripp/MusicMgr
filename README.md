@@ -1,7 +1,7 @@
 # MusicMgr
 
 ## How To Run
-0. [Optional] VIEW DEMO APP AT:
+0. **[Optional] VIEW DEMO APP AT**:
 ```
 https://musicmgr.herokuapp.com/
 ```
