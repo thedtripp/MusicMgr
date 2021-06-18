@@ -1,6 +1,6 @@
 # MusicMgr
 
-### How To Run
+## How To Run
 0. [Optional] demo app at:
 ```
 https://musicmgr.herokuapp.com/
@@ -38,4 +38,17 @@ if __name__ == "__main__":
     app.run(debug=True, port=<desired port>)
 ```
 
-### Usage
+## Usage
+
+### List:
+By default, the application presents a paginated table of songs.
+Click the `Display All` button to return to this view.
+
+### Search:
+List all attributes of the song matching the search term.
+Search is case sensitive.
+
+### Rate:
+Provide a star rating for your songs so you know what you like (and what you don't).
+Accepts an integer from [0, 5].
+Floats will be truncated.
