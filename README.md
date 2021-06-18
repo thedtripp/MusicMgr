@@ -6,7 +6,7 @@ Submission for backend engineer. Meets requirements from 1.1, 1.2.1, 1.2.2, 1.2.
 ## How To Run
 0. **[Optional] VIEW DEMO APP AT**:
 ```
-https://musicmgr.herokuapp.com/
+[https://musicmgr.herokuapp.com/](https://musicmgr.herokuapp.com/)
 ```
 
 1. Install `virtualenv`:
