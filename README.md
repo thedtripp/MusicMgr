@@ -16,6 +16,9 @@ $ pip install virtualenv
 
 2. Open a terminal in the project root directory and run:
 ```
+$ virtualenv env
+```
+```
 $ source env/bin/activate
 ```
 
