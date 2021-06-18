@@ -23,7 +23,7 @@ $ (env) pip install -r requirements.txt
 
 4. Run the `json2sqlite.py` script to generate the playlist database:
 ```
-python json2sqlite.py
+$ (env) python json2sqlite.py
 ```
 
 5. Start the web server:
