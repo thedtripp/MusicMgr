@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Music Mgr</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Music Mgr</h1>
+    <form action="/" method="POST">
+        <input type="text" name="title" id="title" placeholder="search">
+        <input type="submit" value="Search">
+    </form>
+    <form action="/list_all/" method="POST">
+        <input type="submit" value="Display All">
+    </form>
+    
+    {% if songs|length < 1 %}
+    <h4 style="text-align: center">Unable to find song. Please try again.</h4>
+    {% else %}
+    <table >
+        <tr>
+            <th>index</th>  
+            <th>id</th>  
+            <th>title</th>  
+            <th>danceability</th>  
+            <th>energy</th>  
+            <th>key</th>  
+            <th>loudness</th>  
+            <th>mode</th>  
+            <th>acousticness</th>  
+            <th>instrumentalness</th>  
+            <th>liveness</th>  
+            <th>valence</th>  
+            <th>tempo</th>  
+            <th>duration_ms</th>  
+            <th>time_signature</th>  
+            <th>num_bars</th>  
+            <th>num_sections</th>  
+            <th>num_segments</th>  
+            <th>classs</th>  
+            <th>rating</th>  
+        </tr>
+        {% for song in songs %}
+            <tr>
+                <td>{{ song.index }}</td>
+                <td>{{ song.id }}</td>
+                <td>{{ song.title }}</td>
+                <td>{{ song.danceability }}</td>
+                <td>{{ song.energy }}</td>
+                <td>{{ song.key }}</td>
+                <td>{{ song.loudness }}</td>
+                <td>{{ song.mode }}</td>
+                <td>{{ song.acousticness }}</td>
+                <td>{{ song.instrumentalness }}</td>
+                <td>{{ song.liveness }}</td>
+                <td>{{ song.valence }}</td>
+                <td>{{ song.tempo }}</td>
+                <td>{{ song.duration_ms }}</td>
+                <td>{{ song.time_signature }}</td>
+                <td>{{ song.num_bars }}</td>
+                <td>{{ song.num_sections }}</td>
+                <td>{{ song.num_segments }}</td>
+                <td>{{ song.classs }}</td>
+                <td>{{ song.rating }}</td>
+                <td>
+                    <form action="/update/{{ song.index }}" method="POST">
+                        <input type="text" name="rating" id="rating" placeholder="rating">
+                        <input type="submit" value="Rate">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+    </table>
+    {% endif %}
+
+</div>
+{% endblock %}

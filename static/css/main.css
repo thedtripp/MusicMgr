@@ -1,0 +1,50 @@
+.pagination {
+    padding-bottom: 25px;
+}
+
+.pagination ul {
+    list-style-type: none;
+}
+
+.pagination li {
+    float:left;
+    margin-left: 10px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: large;
+}
+
+.pagination li a{
+    text-decoration: none;
+    color: black;
+}
+
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(252, 252, 235);
+}
+
+.content {
+    margin: 0 20px;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+    padding: 5px 5px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}

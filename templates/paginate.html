@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Music Mgr</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Music Mgr</h1>
+    <div id="inputs">
+        <form action="/" method="POST">
+            <input type="text" name="title" id="title" placeholder="search by title">
+            <input type="submit" value="Search">
+        </form>
+        <form action="/list_all/" method="POST">
+            <input type="submit" value="Display All">
+        </form>
+    </div>
+    
+    <table >
+        <tr>
+            <th>index</th>  
+            <th>id</th>  
+            <th>title</th>  
+            <th>danceability</th>  
+            <th>energy</th>  
+            <th>key</th>  
+            <th>loudness</th>  
+            <th>mode</th>  
+            <th>acousticness</th>  
+            <th>instrumentalness</th>  
+            <th>liveness</th>  
+            <th>valence</th>  
+            <th>tempo</th>  
+            <th>duration_ms</th>  
+            <th>time_signature</th>  
+            <th>num_bars</th>  
+            <th>num_sections</th>  
+            <th>num_segments</th>  
+            <th>class</th>  
+            <th>rating</th>  
+        </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ i.index }}</td>
+                <td>{{ i.id }}</td>
+                <td>{{ i.title }}</td>
+                <td>{{ i.danceability }}</td>
+                <td>{{ i.energy }}</td>
+                <td>{{ i.key }}</td>
+                <td>{{ i.loudness }}</td>
+                <td>{{ i.mode }}</td>
+                <td>{{ i.acousticness }}</td>
+                <td>{{ i.instrumentalness }}</td>
+                <td>{{ i.liveness }}</td>
+                <td>{{ i.valence }}</td>
+                <td>{{ i.tempo }}</td>
+                <td>{{ i.duration_ms }}</td>
+                <td>{{ i.time_signature }}</td>
+                <td>{{ i.num_bars }}</td>
+                <td>{{ i.num_sections }}</td>
+                <td>{{ i.num_segments }}</td>
+                <td>{{ i.classs }}</td>
+                <td>{{ i.rating }}</td>
+                <td>
+                    <form action="/update/{{ i.index }}" method="POST">
+                        <input type="text" name="rating" id="rating" placeholder="rating">
+                        <input type="submit" value="Rate">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+    </table>
+    <div class="pagination">
+        {{ paginate.links }}
+    </div>
+</div>
+{% endblock %}
